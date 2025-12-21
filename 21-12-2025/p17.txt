@@ -1,0 +1,15 @@
+ #include<stdio.h>
+ int main()
+ {
+     int x;
+     scanf("%d",&x);
+     if (x>=40)
+     {
+         printf("x is pass");
+     }
+     else if (x<40)
+     {
+         printf("x is fail");
+     }
+     return 0;
+ }

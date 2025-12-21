@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+  int a;
+ printf("enyer the value of a:");
+ scanf("%d",&a);
+ if (a%2==0)
+ printf("if a is even");
+ else 
+ {
+     printf("if a is odd");
+ }
+ return 0;
+}
+ 
