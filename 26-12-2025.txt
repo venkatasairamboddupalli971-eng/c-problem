@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    float cm,feet;
+    scanf("%f",&cm);
+    if (cm<0) {
+        printf("Length cannot be negative");
+    } else {
+        feet = cm * 0.0328084;
+        printf("%.2f centimeters is %.2f feet",cm,feet);
+    }
+    return 0;
+}
+ 
