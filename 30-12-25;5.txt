@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+ int a;
+ scanf("%d",&a);
+ if (a>=85){
+     printf("a grade");
+ }
+ else if ((a>=65)&&(a<84)){
+ printf("b grade");
+ }
+ else  
+ {
+printf("c grade");
+     
+ }
+ return 0;
+}

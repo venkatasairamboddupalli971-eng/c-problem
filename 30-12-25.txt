@@ -1,0 +1,14 @@
+ #include<stdio.h>
+ int main()
+ {
+int x;
+scanf("%d",&x);
+if(x%5==0){
+    printf("is divisible");
+
+}
+else{
+    printf("not divisble");
+}
+return 0;
+ }
