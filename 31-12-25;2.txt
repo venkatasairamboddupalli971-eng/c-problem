@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    if (a<=9){
+        printf("single diget num");
+        
+    }
+    else {
+        printf("not single diget num");
+    }
+    return 0;
+    
+}
