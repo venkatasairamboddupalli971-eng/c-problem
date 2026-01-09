@@ -1,0 +1,12 @@
+ #include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[]="sai ram";
+    char b[]="akhil";
+    if (strcpy(a,b)==0)
+    printf("is equal");
+    else 
+    printf("is not equal");
+    return 0;
+}
