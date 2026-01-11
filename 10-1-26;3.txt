@@ -1,0 +1,16 @@
+ #include<stdio.h>
+ int main()
+ {
+     char a[45];
+     int i=0;
+     fgets(a,45,stdin);
+     while (a[i]!='\0'&&a[i]!='\n'){
+        i++;
+        
+     }
+     printf("%d",i);
+     
+    
+ 
+ return 0;
+ }
