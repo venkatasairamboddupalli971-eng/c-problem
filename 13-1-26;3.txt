@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include<string.h>
+ int main()
+ {
+char str[100];
+int i,d,fact,sum=0,num=0;
+fgets(str,100,stdin);
+for(i=0;str[i]!='\n';i++){
+    d=str[i]-'0';
+
+    num =num*10+d;
+    fact=1;
+    while(d>0){
+        fact=fact*d;
+        d--;
+    }
+    sum=sum+fact;
+}
+if(sum==num)
+printf("strong num");
+else
+printf("not strong num");
+return 0;
+
+}
