@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char code[100];
+    int i,len,flag = 1;
+
+    printf("Enter product code: ");
+    scanf("%s",code);
+
+    len = strlen(code);
+
+    for(i=0; i<len/2; i++){
+        if(code[i] != code[len - i - 1]){
+            flag = 0;
+            break;
+        }
+    }
+    if(flag)
+    printf("pallidrome\n");
+    else
+    printf("Not a pallidrome\n");
+
+      
+    return 0;
+}

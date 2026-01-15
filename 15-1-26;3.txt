@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include<string.h>
+#include<ctype.h>
+
+int main() {
+  char password[100];
+  int i;
+  int hasUpper = 0, hasLower = 0, hasDigit = 0;
+
+  printf("Enter password: ");
+  scanf("%s", password);
+
+  for(i=0; password[i] != '\0'; i++){
+    if(isupper(password[i]))
+    hasUpper = 1;
+    else if(islower(password[i]))
+    hasLower = 1;
+    else if(isdigit(password[i]))
+    hasDigit = 1;
+  }      
+  if(strlen(password) >= 8 && hasUpper && hasLower && hasDigit)
+  printf("Strong password\n");
+  else
+  printf("Weak password\n");
+
+    return 0;
+}
