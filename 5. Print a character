@@ -1,0 +1,6 @@
+#include <stdio.h>
+int main() {
+ printf("ch");
+    
+    return 0;
+}
