@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(){
+    float data;
+    scanf("%f",&data);
+
+    if (data>2.0){
+        printf("data limt exceeded");
+    }
+    else if (data<2.0){
+        printf("data limt within");
+    }
+    else {
+        printf("data limt whitin");
+    }
+    return 0;
+}
