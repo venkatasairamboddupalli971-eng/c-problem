@@ -1,0 +1,6 @@
+int num = 123, sum = 0;
+
+for(; num != 0; num /= 10) {
+    sum += num % 10;
+}
+printf("%d", sum);
