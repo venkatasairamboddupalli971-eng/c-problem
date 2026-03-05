@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    int N, decimal = 0, base = 1;
+    scanf("%d", &N);
+    for(; N > 0; N /= 10) {
+        decimal += (N % 10) * base;
+        base *= 2;
+    }
+    printf("%d", decimal);
+    return 0;
+}
