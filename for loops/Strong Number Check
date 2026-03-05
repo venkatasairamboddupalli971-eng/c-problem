@@ -1,0 +1,17 @@
+#include <stdio.h>
+int factorial(int n) {
+    int f = 1;
+    for(int i = 1; i <= n; i++)
+        f *= i;
+    return f;
+}
+int main() {
+    int N, temp, sum = 0;
+    scanf("%d", &N);
+    temp = N;
+    for(; temp > 0; temp /= 10)
+        sum += factorial(temp % 10);
+    if(sum == N) printf("Yes");
+    else printf("No");
+    return 0;
+}
