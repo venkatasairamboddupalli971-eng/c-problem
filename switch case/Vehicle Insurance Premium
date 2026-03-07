@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int category, age, premium = 0;
+    scanf("%d %d", &category, &age);
+
+    switch(category) {
+        case 1:
+            premium = (age <= 5) ? 1500 : 2500;
+            break;
+        case 2:
+            premium = (age <= 5) ? 4000 : 6000;
+            break;
+    }
+
+    printf("₹%d", premium);
+    return 0;
+}
