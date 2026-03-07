@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+    int type;
+    char season;
+    int tariff = 0;
+    scanf("%d %c", &type, &season);
+
+    switch(type) {
+        case 1:
+            if(season == 'A') tariff = 2500;
+            else tariff = 2000;
+            break;
+
+        case 2:
+            if(season == 'C') tariff = 4000;
+            else tariff = 3000;
+            break;
+    }
+
+    printf("₹%d", tariff);
+    return 0;
+}
