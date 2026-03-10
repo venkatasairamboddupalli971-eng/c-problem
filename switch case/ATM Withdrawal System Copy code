@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    int balance, amount;
+    scanf("%d %d", &balance, &amount);
+
+    if(amount % 100 != 0)
+        printf("Invalid Amount");
+    else if(amount > balance)
+        printf("Insufficient Balance");
+    else {
+        balance -= amount;
+        printf("Remaining Balance ₹%d", balance);
+    }
+
+    return 0;
+}
