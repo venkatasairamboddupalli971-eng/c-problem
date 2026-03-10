@@ -1,0 +1,14 @@
+ #include <stdio.h>
+int main() {
+    int days, fine = 0;
+    scanf("%d", &days);
+
+    switch(days <= 5 ? 1 : days <= 10 ? 2 : 3) {
+        case 1: fine = days * 50; break;
+        case 2: fine = days * 100; break;
+        case 3: fine = days * 200; break;
+    }
+
+    printf("Fine ₹%d", fine);
+    return 0;
+}
