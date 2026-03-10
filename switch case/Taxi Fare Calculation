@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int type, dist, fare = 0;
+    scanf("%d %d", &type, &dist);
+
+    switch(type) {
+        case 1: fare = dist * 10; break;
+        case 2: fare = dist * 15; break;
+        case 3: fare = dist * 20; break;
+    }
+
+    printf("Fare ₹%d", fare);
+    return 0;
+}
