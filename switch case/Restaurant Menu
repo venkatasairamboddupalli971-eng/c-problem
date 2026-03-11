@@ -1,0 +1,75 @@
+#include <stdio.h>
+
+int main()
+{
+    int choice, qty;
+    int price, total;
+
+    printf("Restaurant Menu\n");
+    printf("1. Burger - 120\n");
+    printf("2. Pizza - 250\n");
+    printf("3. Sandwich - 100\n");
+    printf("4. Coffee - 80\n");
+    printf("5. Tea - 40\n");
+    printf("6. Exit\n");
+
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    switch(choice)
+    {
+        case 1:
+            price = 120;
+            printf("Enter quantity: ");
+            scanf("%d", &qty);
+            total = price * qty;
+            printf("Burger Price = %d\n", price);
+            printf("Total Bill = %d", total);
+            break;
+
+        case 2:
+            price = 250;
+            printf("Enter quantity: ");
+            scanf("%d", &qty);
+            total = price * qty;
+            printf("Pizza Price = %d\n", price);
+            printf("Total Bill = %d", total);
+            break;
+
+        case 3:
+            price = 100;
+            printf("Enter quantity: ");
+            scanf("%d", &qty);
+            total = price * qty;
+            printf("Sandwich Price = %d\n");
+            printf("Total Bill = %d", total);
+            break;
+
+        case 4:
+            price = 80;
+            printf("Enter quantity: ");
+            scanf("%d", &qty);
+            total = price * qty;
+            printf("Coffee Price = %d\n", price);
+            printf("Total Bill = %d", total);
+            break;
+
+        case 5:
+            price = 40;
+            printf("Enter quantity: ");
+            scanf("%d", &qty);
+            total = price * qty;
+            printf("Tea Price = %d\n", price);
+            printf("Total Bill = %d", total);
+            break;
+
+        case 6:
+            printf("Thank you! Visit again.");
+            break;
+
+        default:
+            printf("Invalid Choice");
+    }
+
+    return 0;
+}
