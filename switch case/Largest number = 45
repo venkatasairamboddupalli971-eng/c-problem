@@ -1,0 +1,90 @@
+#include <stdio.h>
+
+int main() {
+    int choice, a, b, c, num, i;
+    int fact = 1;
+
+    printf("1.Addition\n");
+    printf("2.Subtraction\n");
+    printf("3.Multiplication\n");
+    printf("4.Division\n");
+    printf("5.Largest of 3 numbers\n");
+    printf("6.Even or Odd\n");
+    printf("7.Factorial\n");
+    printf("8.Exit\n");
+
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    switch(choice) {
+
+        case 1:
+            printf("Enter two numbers: ");
+            scanf("%d %d", &a, &b);
+            printf("Sum = %d", a + b);
+            break;
+
+        case 2:
+            printf("Enter two numbers: ");
+            scanf("%d %d", &a, &b);
+            printf("Subtraction = %d", a - b);
+            break;
+
+        case 3:
+            printf("Enter two numbers: ");
+            scanf("%d %d", &a, &b);
+            printf("Multiplication = %d", a * b);
+            break;
+
+        case 4:
+            printf("Enter two numbers: ");
+            scanf("%d %d", &a, &b);
+            printf("Division = %d", a / b);
+            break;
+
+        case 5:
+            printf("Enter three numbers: ");
+            scanf("%d %d %d", &a, &b, &c);
+
+            if(a >= b && a >= c)
+                printf("Largest = %d", a);
+            else if(b >= a && b >= c)
+                printf("Largest = %d", b);
+            else
+                printf("Largest = %d", c);
+
+            break;
+
+        case 6:
+            printf("Enter a number: ");
+            scanf("%d", &num);
+
+            if(num % 2 == 0)
+                printf("Even Number");
+            else
+                printf("Odd Number");
+
+            break;
+
+        case 7:
+            printf("Enter a number: ");
+            scanf("%d", &num);
+
+            for(i = 1; i <= num; i++) {
+                fact = fact * i;
+            }
+
+            printf("Factorial = %d", fact);
+            break;
+
+        case 8:
+            printf("Program Exited");
+            break;
+
+        default:
+            printf("Invalid Choice");
+
+    }
+
+    return 0;
+}
