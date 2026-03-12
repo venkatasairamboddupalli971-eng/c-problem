@@ -1,0 +1,7 @@
+for(initialization1; condition1; increment1)
+{
+    for(initialization2; condition2; increment2)
+    {
+        statements;
+    }
+}
