@@ -1,0 +1,4 @@
+for(initialization; condition; increment/decrement)
+{
+    // statements
+}
