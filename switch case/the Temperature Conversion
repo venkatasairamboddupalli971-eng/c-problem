@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int units;
+    float bill;
+
+    scanf("%d",&units);
+
+    switch(units <= 100) {
+        case 1:
+            bill = units * 2;
+            break;
+        case 0:
+            bill = 100*2 + (units-100)*3;
+    }
+
+    printf("Bill = %.2f",bill);
+}
