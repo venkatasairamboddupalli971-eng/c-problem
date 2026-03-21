@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main() {
+    int choice;
+    float balance=5000, amt;
+
+    scanf("%d",&choice);
+
+    switch(choice) {
+        case 1:
+            printf("Balance = %.2f",balance);
+            break;
+
+        case 2:
+            scanf("%f",&amt);
+            balance+=amt;
+            printf("New Balance = %.2f",balance);
+            break;
+
+        case 3:
+            scanf("%f",&amt);
+            if(amt>balance)
+                printf("Insufficient");
+            else {
+                balance-=amt;
+                printf("Remaining = %.2f",balance);
+            }
+            break;
+
+        default:
+            printf("Invalid");
+    }
+}
