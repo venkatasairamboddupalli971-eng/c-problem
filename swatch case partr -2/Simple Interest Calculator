@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+    int choice;
+    float p,r,t,si;
+
+    printf("1.Calculate SI\n");
+    scanf("%d",&choice);
+
+    switch(choice) {
+        case 1:
+            scanf("%f%f%f",&p,&r,&t);
+            si = (p*r*t)/100;
+            printf("SI = %.2f",si);
+            break;
+        default:
+            printf("Invalid");
+    }
+}
