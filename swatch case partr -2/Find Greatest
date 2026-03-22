@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+
+    switch((a>b && a>c)) {
+        case 1: printf("Greatest = %d",a); break;
+        case 0:
+            switch(b>c) {
+                case 1: printf("Greatest = %d",b); break;
+                case 0: printf("Greatest = %d",c);
+            }
+    }
+}
