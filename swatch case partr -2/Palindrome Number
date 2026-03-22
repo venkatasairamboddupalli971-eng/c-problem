@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+    int num,temp,rev=0;
+    scanf("%d",&num);
+    temp=num;
+
+    switch(1) {
+        case 1:
+            while(num>0) {
+                rev = rev*10 + num%10;
+                num/=10;
+            }
+
+            switch(rev==temp) {
+                case 1: printf("Palindrome"); break;
+                case 0: printf("Not Palindrome");
+            }
+    }
+}
