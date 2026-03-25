@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    float amount;
+    scanf("%f",&amount);
+
+    switch(amount>1000) {
+        case 1: printf("Final = %.2f", amount*0.9); break;
+        case 0: printf("Final = %.2f", amount);
+    }
+}
