@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int n,i,sum=0;
+    scanf("%d",&n);
+
+    switch(n>0) {
+        case 1:
+            for(i=1;i<=n;i++)
+                sum+=i;
+            printf("Sum = %d",sum);
+            break;
+        case 0:
+            printf("Invalid");
+    }
+}
