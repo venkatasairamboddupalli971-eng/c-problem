@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    int num;
+    scanf("%d",&num);
+
+    switch(num>=1 && num<=100) {
+        case 1: printf("In Range"); break;
+        case 0: printf("Out of Range");
+    }
+}
