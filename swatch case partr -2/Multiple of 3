@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    int num;
+    scanf("%d",&num);
+
+    switch(num%3==0) {
+        case 1: printf("Multiple of 3"); break;
+        case 0: printf("Not Multiple");
+    }
+}
