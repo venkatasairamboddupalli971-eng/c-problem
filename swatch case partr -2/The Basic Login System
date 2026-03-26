@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main() {
+    int user=101, pass=123;
+    int u,p;
+
+    scanf("%d%d",&u,&p);
+
+    switch(u==user && p==pass) {
+        case 1: printf("Login Success"); break;
+        case 0: printf("Login Failed");
+    }
+}
