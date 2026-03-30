@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    char ch = 'A';
+
+    switch(ch) {
+        case 'A': printf("ASCII: 65"); break;
+        case 'B': printf("ASCII: 66"); break;
+        default: printf("Other character");
+    }
+}
