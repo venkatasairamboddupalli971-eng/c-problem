@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    int option = 1;
+
+    switch(option) {
+        case 1: printf("Check Balance"); break;
+        case 2: printf("Withdraw Money"); break;
+        case 3: printf("Deposit Money"); break;
+        default: printf("Invalid Option");
+    }
+}
