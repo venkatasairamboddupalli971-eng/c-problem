@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int num = 0;
+
+    switch(num > 0) {
+        case 1: printf("Positive"); break;
+        case 0:
+            switch(num == 0) {
+                case 1: printf("Zero"); break;
+                case 0: printf("Negative");
+            }
+    }
+}
