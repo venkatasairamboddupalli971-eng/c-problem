@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    int m = 12;
+
+    switch(m) {
+        case 1: printf("January"); break;
+        case 12: printf("December"); break;
+        default: printf("Other Month");
+    }
+}
