@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+    char ch = 'G';
+
+    switch(ch >= 'A' && ch <= 'Z') {
+        case 1: printf("Uppercase"); break;
+        case 0: printf("Lowercase or other");
+    }
+}
