@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    int choice = 1;
+    int p = 1000, t = 2, r = 5;
+
+    switch(choice) {
+        case 1: printf("SI = %d", (p*t*r)/100); break;
+        default: printf("Invalid");
+    }
+}
