@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+    int year = 2024;
+
+    switch((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        case 1: printf("Leap Year"); break;
+        case 0: printf("Not Leap Year");
+    }
+}
