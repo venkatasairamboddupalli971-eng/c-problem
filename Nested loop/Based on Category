@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    int category = 2;
+
+    switch(category) {
+        case 1: printf("10%% Discount"); break;
+        case 2: printf("20%% Discount"); break;
+        case 3: printf("30%% Discount"); break;
+        default: printf("No Discount");
+    }
+}
