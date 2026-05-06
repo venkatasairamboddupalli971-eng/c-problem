@@ -1,0 +1,10 @@
+int n, i = 2, sum = 0;
+
+scanf("%d", &n);
+
+while(i <= 2*n) {
+    sum = sum + i;
+    i = i + 2;
+}
+
+printf("%d", sum);
