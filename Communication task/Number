@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    int num1, num2, product;
+
+    scanf("%d %d", &num1, &num2);   // Read two integers
+
+    product = num1 * num2;          // Calculate product
+
+    printf("%d", product);          // Print result
+
+    return 0;
+}
