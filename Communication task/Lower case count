@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    char str[100];
+    int i, upper = 0, lower = 0;
+
+    scanf("%s", str);
+
+    for (i = 0; str[i] != '\0'; i++)
+    {
+        if (str[i] >= 'A' && str[i] <= 'Z')
+            upper++;
+        else if (str[i] >= 'a' && str[i] <= 'z')
+            lower++;
+    }
+
+    printf("Upper case letters = %d\n", upper);
+    printf("Lower case letters = %d", lower);
+
+    return 0;
+}
