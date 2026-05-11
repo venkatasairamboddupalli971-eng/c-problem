@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main() {
+    int num;
+    scanf("%d",&num);
+
+    switch((num%2==0)*2 + (num%3==0)) {
+        case 3: printf("Divisible by 2 and 3"); break;
+        case 2: printf("Divisible by 2 only"); break;
+        case 1: printf("Divisible by 3 only"); break;
+        case 0: printf("Not divisible");
+    }
+}
