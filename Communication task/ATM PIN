@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main() {
+    int pin;
+
+    printf("Enter PIN: ");
+    scanf("%d",&pin);
+
+    switch(pin==1234) {
+        case 1: printf("Access Granted"); break;
+        case 0: printf("Access Denied");
+    }
+}
