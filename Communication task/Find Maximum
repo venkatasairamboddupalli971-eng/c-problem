@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+    int a,b,c,d,max;
+
+    scanf("%d%d%d%d",&a,&b,&c,&d);
+
+    max = a;
+
+    switch(b>max) {
+        case 1: max = b;
+    }
+    switch(c>max) {
+        case 1: max = c;
+    }
+    switch(d>max) {
+        case 1: max = d;
+    }
+
+    printf("Max = %d",max);
+}
