@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    char ch;
+    scanf("%c",&ch);
+
+    switch(ch >= 'A' && ch <= 'Z') {
+        case 1: printf("%c", ch+32); break;
+        case 0: printf("%c", ch-32);
+    }
+}
