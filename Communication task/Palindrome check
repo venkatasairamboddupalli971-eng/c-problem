@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    char str[50];
+    int i;
+
+    scanf("%s", str);   // correct input for string
+
+    for(i = 0; i < 4; i++)
+    {
+        printf("%s\n", str);
+    }
+
+    return 0;
+}
