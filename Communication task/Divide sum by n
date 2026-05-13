@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int a[20], n, i = 0;
+    int sum = 0;
+    float avg;
+
+    scanf("%d", &n);
+
+    while(i < n) {
+        scanf("%d", &a[i]);
+        sum = sum + a[i];
+        i++;
+    }
+
+    avg = (float)sum / n;
+    printf("%.0f", avg);
+
+    return 0;
+}
