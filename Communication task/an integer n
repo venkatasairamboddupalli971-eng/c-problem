@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int a[20], i, n, count = 0;
+
+    scanf("%d", &n);          // Read number of elements
+
+    for (i = 0; i < n; i++) {
+        scanf("%d", &a[i]);  // Read array elements
+    }
+
+    for (i = 0; i < n; i++) {
+        count = count + a[i];   // Sum elements
+        if (a[i] > n) {
+            printf("%d", count);
+        }
+    }
+    return 0;
+}
