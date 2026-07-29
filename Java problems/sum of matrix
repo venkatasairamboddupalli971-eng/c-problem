@@ -1,0 +1,20 @@
+public class SumofMatrixs {
+    public static int sum(int[][]arr){
+        int  total = 0;
+       // for(short[] row:arr) {
+         //   for(short each:row)
+           //     total+=each;
+        for(int[] row:arr)
+            total+=Arrays.stream(row).sum();
+        return total;
+    }
+    public static void main(String[] args) {
+        int[][] tds = {
+            {2,5,6},
+            {45,675,2,54},
+            {9,4,5}
+        };
+        System.out.println(sum(tds));
+    }
+}
+
