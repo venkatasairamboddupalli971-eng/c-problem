@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+
+    static int countSteps(int num) {
+        int steps = 0;
+
+        while (num > 0) {
+            steps++;
+            num = (num % 2 == 0) ? num / 2 : num - 1;
+        }
+
+        return steps;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+        System.out.println(countSteps(num));
+    }
+}
