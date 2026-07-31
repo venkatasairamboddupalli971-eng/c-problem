@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+
+    static int steps = 0;
+
+    static void reduce(int num) {
+        if (num == 0)
+            return;
+
+        steps++;
+
+        if (num % 2 == 0)
+            reduce(num / 2);
+        else
+            reduce(num - 1);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+        reduce(num);
+
+        System.out.println(steps);
+    }
+}
