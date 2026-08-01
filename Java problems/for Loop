@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+        int steps = 0;
+
+        for (; num > 0; steps++) {
+            if (num % 2 == 0)
+                num /= 2;
+            else
+                num--;
+        }
+
+        System.out.println(steps);
+    }
+}
