@@ -1,0 +1,21 @@
+int amount = sc.nextInt();
+
+int hundreds = amount / 100;
+amount %= 100;
+
+int fifties = amount / 50;
+amount %= 50;
+
+int twenties = amount / 20;
+amount %= 20;
+
+int tens = amount / 10;
+amount %= 10;
+
+int fives = amount / 5;
+amount %= 5;
+
+int twos = amount / 2;
+amount %= 2;
+
+int ones = amount;
