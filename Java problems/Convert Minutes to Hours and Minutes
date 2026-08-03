@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int minutes = sc.nextInt();
+
+        System.out.println("Hours = " + (minutes / 60));
+        System.out.println("Minutes = " + (minutes % 60));
+    }
+}
