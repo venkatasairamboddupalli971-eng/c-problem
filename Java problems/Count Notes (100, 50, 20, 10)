@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int amount = sc.nextInt();
+
+        int h = amount / 100;
+        amount %= 100;
+
+        int f = amount / 50;
+        amount %= 50;
+
+        int t = amount / 20;
+        amount %= 20;
+
+        int ten = amount / 10;
+
+        System.out.println(h);
+        System.out.println(f);
+        System.out.println(t);
+        System.out.println(ten);
+    }
+}
