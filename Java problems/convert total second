@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        long total = sc.nextLong();
+
+        long days = total / 86400;
+        total = total % 86400;
+
+        long hours = total / 3600;
+        total = total % 3600;
+
+        long minutes = total / 60;
+        long seconds = total % 60;
+
+        System.out.println(days + " " + hours + " " + minutes + " " + seconds);
+    }
+}
