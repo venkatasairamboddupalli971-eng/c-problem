@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        double radius = sc.nextDouble();
+        double length = sc.nextDouble();
+        double width = sc.nextDouble();
+        double base = sc.nextDouble();
+        double height = sc.nextDouble();
+
+        double circle = 3.14159 * radius * radius;
+        double rectangle = length * width;
+        double triangle = 0.5 * base * height;
+
+        System.out.println(circle);
+        System.out.println(rectangle);
+        System.out.println(triangle);
+    }
+}
