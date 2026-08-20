@@ -1,0 +1,14 @@
+class Solution {
+    public static void depth(TreeNode cur,List<Integer> store){
+        if(cur==null) return;
+        depth(cur.left,store);
+        store.add(cur.val);
+        depth(cur.right, store);
+    }
+    public List<Integer> inorderTraversal(TreeNode root) {
+List<Integer> items=new ArrayList<>();
+depth(root, items);
+return items;
+}
+        
+    }
