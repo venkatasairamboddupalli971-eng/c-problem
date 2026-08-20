@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main {
+    static long reverse(long n) {
+        long rev = 0;
+        while (n > 0) {
+            long digit = n % 10;
+            rev = rev * 10 + digit;
+            n = n / 10;
+        }
+        return rev;
+    }
+    static boolean isPalindrome(long n) {
+        return n == reverse(n);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long num = sc.nextLong();
+        long square1 = num * num;
+        long reversed = reverse(num);
+        long square2 = reversed * reversed;
+        if (isPalindrome(square1) && isPalindrome(square2)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
