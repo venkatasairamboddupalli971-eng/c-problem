@@ -1,0 +1,14 @@
+
+class Solution {
+    public TreeNode invertTree(TreeNode cur) {
+        if (cur == null) {
+            return null;
+        }
+        TreeNode third = cur.left;
+        cur.left = cur.right;
+        cur.right = third;
+        invertTree(cur.left);
+        invertTree(cur.right);
+        return cur;
+    }
+}
