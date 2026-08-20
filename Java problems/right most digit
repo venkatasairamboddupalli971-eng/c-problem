@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long num = sc.nextLong();
+        long right = num % 10;
+        long left = num;
+        while (left >= 10) {
+            left = left / 10;
+        }
+        System.out.println(left + " " + right);
+    }
+}
