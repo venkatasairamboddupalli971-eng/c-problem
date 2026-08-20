@@ -1,0 +1,22 @@
+ import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String num = sc.next();
+        String[] words = {
+            "zero", "one", "two", "three", "four",
+            "five", "six", "seven", "eight", "nine"
+        };
+        int start = 0;
+        while (start < num.length() - 1 && num.charAt(start) == '0') {
+            start++;
+        }
+        for (int i = start; i < num.length(); i++) {
+            if (i > start) {
+                System.out.print(" ");
+            }
+            int digit = num.charAt(i) - '0';
+            System.out.print(words[digit]);
+        }
+    }
+}
