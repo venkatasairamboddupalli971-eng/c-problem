@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        long num = sc.nextLong();
+
+        long original = num;
+        long temp = num;
+
+        // Count digits
+        int count = 0;
+
+        while (temp > 0) {
+            count++;
+            temp = temp / 10;
+        }
+
+        // Calculate Armstrong sum
+        temp = num;
+        long sum = 0;
+
+        while (temp > 0) {
+            long digit = temp % 10;
+
+            long power = 1;
+
+            for (int i = 1; i <= count; i++) {
+                power = power * digit;
+            }
+
+            sum = sum + power;
+            temp = temp / 10;
+        }
+
+        if (sum == original) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
