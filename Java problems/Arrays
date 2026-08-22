@@ -1,0 +1,101 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int T = sc.nextInt();
+
+        while (T-- > 0) {
+            int N = sc.nextInt();
+            long[] a = new long[N];
+
+            for (int i = 0; i < N; i++)
+                a[i] = sc.nextLong();
+
+            long[] x = new long[N];
+            x[0] = a[0];
+
+            for (int i = 1; i < N; i++)
+                x[i] = a[i] - x[i - 1];
+
+            boolean[] goodPrefix = new boolean[N];
+            goodPrefix[0] = x[0] >= 0;
+
+            for (int i = 1; i < N; i++)
+                goodPrefix[i] = goodPrefix[i - 1] && x[i] >= 0;
+
+            long[] evenMin = new long[N];
+            long[] oddMin = new long[N];
+
+            Arrays.fill(evenMin, Long.MAX_VALUE);
+            Arrays.fill(oddMin, Long.MAX_VALUE);
+
+            for (int i = N - 2; i >= 0; i--) {
+                if (i % 2 == 0)
+                    evenMin[i] = Math.min(x[i], i + 2 < N ? evenMin[i + 2] : Long.MAX_VALUE);
+                else
+                    oddMin[i] = Math.min(x[i], i + 2 < N ? oddMin[i + 2] : Long.MAX_VALUE);
+            }
+
+            int ans = 0;
+
+            for (int k = 0; k < N; k++) {
+
+                if (k == N - 1) {
+                    if (goodPrefix[N - 2] && x[N - 2] == a[N - 1])
+                        ans++;
+                    continue;
+                }
+
+                if (k > 0 && !goodPrefix[k - 1])
+                    continue;
+
+                long d;
+
+                if ((N - 1 - k) % 2 == 0)
+                    d = a[N - 1] - x[N - 1];
+                else
+                    d = x[N - 1] - a[N - 1];
+
+                long newX = a[k] + d;
+
+                if (newX < 0)
+                    continue;
+
+                boolean ok = true;
+
+                // j has same parity as k
+                if (k % 2 == 0) {
+                    if (evenMin[k] != Long.MAX_VALUE &&
+                        evenMin[k] + d < 0)
+                        ok = false;
+                } else {
+                    if (oddMin[k] != Long.MAX_VALUE &&
+                        oddMin[k] + d < 0)
+                        ok = false;
+                }
+
+                // j has opposite parity
+                if (k + 1 < N - 1) {
+                    if ((k + 1) % 2 == 0) {
+                        if (evenMin[k + 1] != Long.MAX_VALUE &&
+                            evenMin[k + 1] - d < 0)
+                            ok = false;
+                    } else {
+                        if (oddMin[k + 1] != Long.MAX_VALUE &&
+                            oddMin[k + 1] - d < 0)
+                            ok = false;
+                    }
+                }
+
+                if (ok)
+                    ans++;
+            }
+
+            System.out.println(ans);
+        }
+
+        sc.close();
+    }
+}
