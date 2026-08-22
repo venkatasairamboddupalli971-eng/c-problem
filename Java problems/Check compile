@@ -1,0 +1,43 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int T = sc.nextInt();
+
+        while (T-- > 0) {
+            int N = sc.nextInt();
+            long[] a = new long[N];
+
+            for (int j = 0; j < N; j++) {
+                a[j] = sc.nextLong();
+            }
+
+            long[] x = new long[N - 1];
+
+            x[0] = a[0];
+
+            for (int j = 1; j < N - 1; j++) {
+                x[j] = a[j] - x[j - 1];
+            }
+
+            boolean good = true;
+
+            for (int j = 0; j < N - 1; j++) {
+                if (x[j] < 0) {
+                    good = false;
+                    break;
+                }
+            }
+
+            if (good && x[N - 2] == a[N - 1]) {
+                System.out.println(N);
+            } else {
+                System.out.println(0);
+            }
+        }
+
+        sc.close();
+    }
+}
