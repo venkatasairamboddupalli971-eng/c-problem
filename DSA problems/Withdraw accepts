@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int b = sc.nextInt();
+        int w = sc.nextInt();
+
+        if ((w % 100 == 0 || b == w + 10) && b >= w + 10) {
+            b = b - w - 10;
+        }
+
+        System.out.println(b);
+    }
+}
