@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int E = sc.nextInt();
+        int N = sc.nextInt();
+
+        int completed = 0;
+
+        for (int i = 1; i <= N; i++) {
+            int required = i * 5;
+
+            if (E < required) {
+                break;
+            }
+
+            E = E - required;
+            completed++;
+
+            if (i == 3) {
+                E = E + 20;
+            }
+        }
+
+        System.out.println(completed + " " + E);
+    }
+}
