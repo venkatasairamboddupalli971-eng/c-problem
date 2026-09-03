@@ -1,0 +1,43 @@
+import java.util.*;
+
+class Student {
+    int id;
+    String name;
+    int marks;
+
+    Student(int id, String name, int marks) {
+        this.id = id;
+        this.name = name;
+        this.marks = marks;
+    }
+
+    void display() {
+        System.out.println("ID: " + id);
+        System.out.println("Name: " + name);
+        System.out.println("Marks: " + marks);
+
+        if (marks >= 40)
+            System.out.println("Result: PASS");
+        else
+            System.out.println("Result: FAIL");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of students: ");
+        int n = sc.nextInt();
+
+        Student[] students = new Student[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("\nEnter Student " + (i + 1));
+
+            System.out.print("ID: ");
+            int id = sc.nextInt();
+
+            sc.nextLine();
+
+            System.out.print("
