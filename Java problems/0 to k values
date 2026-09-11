@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int T = sc.nextInt();
+
+        while (T-- > 0) {
+            int N = sc.nextInt();
+            int K = sc.nextInt();
+
+            int[] A = new int[N];
+            int totalSum = 0;
+
+            for (int i = 0; i < N; i++) {
+                A[i] = sc.nextInt();
+                totalSum += A[i];
+            }
+
+            int maxSum = 0;
+
+            for (int left = 0; left <= K; left++) {
+                int right = K - left;
+                int removedSum = 0;
+
+                // Remove from first
+                for (int i = 0; i < left; i++) {
+                    removedSum += A[i];
+                }
+
+                // Remove from last
+                for (int i = 0; i < right; i++) {
+                    removedSum += A[N - 1 - i];
+                }
+
+                int remainingSum = totalSum - removedSum;
+                maxSum = Math.max(maxSum, remainingSum);
+            }
+
+            System.out.println(maxSum);
+        }
+    }
+}
