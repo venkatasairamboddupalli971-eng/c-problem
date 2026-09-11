@@ -1,0 +1,26 @@
+# cook your dish here
+
+T = int(input())
+
+for _ in range(T):
+    N, K = map(int, input().split())
+    A = list(map(int, input().split()))
+
+    total_sum = sum(A)
+    max_sum = 0
+
+    for left in range(K + 1):
+        right = K - left
+        removed_sum = 0
+
+        # Remove from first
+        removed_sum += sum(A[:left])
+
+        # Remove from last
+        if right > 0:
+            removed_sum += sum(A[N-right:])
+
+        remaining_sum = total_sum - removed_sum
+        max_sum = max(max_sum, remaining_sum)
+
+    print(max_sum)
